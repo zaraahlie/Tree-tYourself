@@ -76,7 +76,7 @@ def determineQuesions(loc):
         return ["Disguise" ,"Reveal"] ,2
 
     elif loc == "RR":
-        return ["Long", "Short"]
+        return ["Long", "Short"] ,2
 
     elif loc == "RL":
         return ["Danger", "Safety"] , 2
