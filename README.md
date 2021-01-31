@@ -15,5 +15,7 @@ The simplicity of the gameplay in its Buzzfeed-esque quiz style makes it so anyo
 
 ## What We're Submitting For
 > Best "Green" Hack
+
 > Best Educational Hack
+
 > Best Game
