@@ -5,7 +5,7 @@ def determiningFinalLocation(loc):
     tree1 = ["LLLLL","LLLML","LLLRL", "LLML"]
     tree2 = ["LLLLR", "LLLMR","LLLRR","LLMR"]
     tree3 = ["LLR","LRL", "LRRL","LRLR","RLLL","RLLLR","RLRLL","RLRLR"]
-    tree4 = ["LRLM","RLLLM","RLRLM"]
+    tree4 = ["LRLM","RLLLM","RLRLM","LRRM"]
     tree5 = ["RLRRL","RRLR", "RRRR"]
     tree6 = ["RLRRR","RRLL","RRRL"]
     allTrees = [tree1,tree2,tree3,tree4,tree5,tree6]
@@ -95,6 +95,9 @@ def determineQuesions(loc):
 
     elif loc == "RLRL":
         return ["Glitter", "Shine","Glow"],3
+    
+    elif loc == "LRR":
+        return ["Hot", "Warm","Cool"], 3
 
         
 
