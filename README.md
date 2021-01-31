@@ -16,6 +16,8 @@ The simplicity of the gameplay in its Buzzfeed-esque quiz style makes it so anyo
 ## What We Used
 We used Python and Tkinter for the GUI
 
+## How to Play
+Run the main.py file in the Hackathon folder and have fun!
 
 ## What We're Submitting For
 > Best "Green" Hack
