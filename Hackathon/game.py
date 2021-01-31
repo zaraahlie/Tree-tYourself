@@ -1,6 +1,7 @@
 import screen as s
 USER = ""
-#moves the character and returns their tree → in int form
+
+#Determines if the player is at the end location → returns if at end and which tree
 def determiningFinalLocation(loc):
     tree1 = ["LLLLL","LLLML","LLLRL", "LLML"]
     tree2 = ["LLLLR", "LLLMR","LLLRR","LLMR"]
@@ -14,22 +15,20 @@ def determiningFinalLocation(loc):
             return True , i
     return False , 0
 
-
+#Adds the Direction to the USER
 def addDirectionL():
     s.USER += "L"
-    print(s.USER)
     determineScreen()
 
 def addDirectionR():
     s.USER += "R"
-    print(s.USER)
     determineScreen()
     
 def addDirectionM():
     s.USER += "M"
-    print(s.USER)
     determineScreen()
 
+#Determines what screen that should be displaying
 def determineScreen():
     stop , name = determiningFinalLocation(s.USER)
     if stop:
@@ -42,6 +41,8 @@ def determineScreen():
             s.path_screen2(questions[0],questions[1])
         elif numPath == 3:
             s.path_screen3(questions[0],questions[1],questions[2])
+
+
 #displays the correct question at each intersection/crossroads
 #return a string where it contains the quesion(String) and possible routes(int)
 def determineQuesions(loc):
@@ -98,8 +99,6 @@ def determineQuesions(loc):
     
     elif loc == "LRR":
         return ["Hot", "Warm","Cool"], 3
-
-        
-
-
-                
+    
+    elif loc =="RLRR":
+        return ["Tall", "Short"] , 2

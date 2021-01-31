@@ -1,6 +1,6 @@
 from tkinter import *
 from game import *
-
+#Screen set up
 window = Tk()
 
 window.geometry('600x400')
@@ -21,7 +21,7 @@ window.rowconfigure(2,weight=1)
 window.rowconfigure(3,weight=1)
 window.rowconfigure(4,weight=1)
 
-
+#clears screen
 def clear():
     list = window.grid_slaves()
     for l in list:
@@ -29,18 +29,15 @@ def clear():
 
 
 def confirm_name(name):
-
     clear()
-    lbl = Label(window, text="Is "+name+" your name?",font=("Arial", 20),bg='OliveDrab1')
 
+    lbl = Label(window, text="Is "+name+" your name?",font=("Arial", 20),bg='OliveDrab1')
     lbl.grid(column=3, row=0)
 
-    yes_btn = Button(window, text="yes",font=("Arial", 20), command=determineScreen)
-
+    yes_btn = Button(window, text="yes",font=("Arial", 20), command=instructions_screen)
     yes_btn.grid(column=2, row=2)
 
     no_btn = Button(window, text="no",font=("Arial", 20), command=name_screen)
-
     no_btn.grid(column=4, row=2)
 
 def name_screen():
@@ -48,15 +45,12 @@ def name_screen():
     clear()
 
     lbl = Label(window, text="Please enter your name",font=("Arial", 20),bg='OliveDrab1')
-
     lbl.grid(column=3, row=0)
 
     txt = Entry(window,width=10,font=("Arial", 20))
-
     txt.grid(column=3, row=1)
 
     new_btn = Button(window, text="confirm",font=("Arial", 20), command= lambda: confirm_name(txt.get()))
-
     new_btn.grid(column=3, row=2)
 
 def start_screen():
@@ -64,59 +58,62 @@ def start_screen():
     window.configure(bg='OliveDrab1')
 
     lbl = Label(window, text="Tree-t Yourself!", font=("Arial Bold", 40),bg='OliveDrab1')
-
     lbl.grid(column=3, row=1)
 
     quit_btn = Button(window, text="quit",font=("Arial", 20), command=exit)
-
     quit_btn.grid(column=4, row=2)
 
     start_btn = Button(window, text="start",font=("Arial", 20), command=name_screen)
-
     start_btn.grid(column=2, row=2)
 
+def instructions_screen():
+    clear()
+
+    lbl = Label(window, text="Instructions", font=("Arial Bold", 40),bg='OliveDrab1')
+    lbl.grid(column=2, row=1)
+
+    window.configure(bg='OliveDrab1')
+    lbl = Label(window, text="Choose the word that best impacts you at the moment. At the end of your route,\n your answers will spawn a tree that you can learn about!", font=("Arial Bold", 10),bg='OliveDrab1')
+    lbl.grid(column=2, row=2)
+
+    startButton = Button(window, text="Start",font=("Arial", 20), command=determineScreen)
+    startButton.grid(column=2, row=3)
 
 def path_screen2(ques1, ques2):
     clear()
-    #creates the window
+    
     window.configure(bg='OliveDrab1')
-
-    #collects the correct question
-
 
     lbl = Label(window, text= ques1 + " or " + ques2 ,font=("Arial", 20),bg='OliveDrab1')
     lbl.grid(column=3, row=0)
 
     question1 = Button(window, text=ques1,font=("Arial", 20), command=addDirectionL)
-
     question1.grid(column=2, row=2)
 
     question2 = Button(window, text=ques2,font=("Arial", 20), command=addDirectionR)
-
     question2.grid(column=4, row=2)
 
 def path_screen3(ques1, ques2, ques3):
     clear()
-    #creates the window
+   
     window.configure(bg='OliveDrab1')
 
     lbl = Label(window, text= ques1 + " or " + ques2 ,font=("Arial", 20),bg='OliveDrab1')
     lbl.grid(column=3, row=0)
 
     question1 = Button(window, text=ques1,font=("Arial", 20), command=addDirectionL)
-
     question1.grid(column=2, row=2)
 
     question2 = Button(window, text=ques2,font=("Arial", 20), command=addDirectionM)
-
     question2.grid(column=3, row=2)
 
     question3 = Button(window, text=ques3,font=("Arial", 20), command=addDirectionR)
-
     question3.grid(column=4, row=2)
 
+#Displays the end Screen
 def endScreen(tree):
     clear()
+
     window.configure(bg='OliveDrab1')
     next_screen = ""
 
@@ -140,7 +137,7 @@ def endScreen(tree):
     next_btn.grid(column=4, row=2)
 
 
-
+#Displays the Facts per each Tree
 def factsScreen0():
     clear()
     window.configure(bg='OliveDrab1')
