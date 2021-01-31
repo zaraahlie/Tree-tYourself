@@ -81,7 +81,7 @@ def instructions_screen():
 
 def path_screen2(ques1, ques2):
     clear()
-    
+
     window.configure(bg='OliveDrab1')
 
     lbl = Label(window, text= ques1 + " or " + ques2 ,font=("Arial", 20),bg='OliveDrab1')
@@ -95,10 +95,10 @@ def path_screen2(ques1, ques2):
 
 def path_screen3(ques1, ques2, ques3):
     clear()
-   
+
     window.configure(bg='OliveDrab1')
 
-    lbl = Label(window, text= ques1 + " or " + ques2 ,font=("Arial", 20),bg='OliveDrab1')
+    lbl = Label(window, text= ques1 + ", " + ques2 +" or " + ques3,font=("Arial", 20),bg='OliveDrab1')
     lbl.grid(column=3, row=0)
 
     question1 = Button(window, text=ques1,font=("Arial", 20), command=addDirectionL)
@@ -163,6 +163,8 @@ def factsScreen0():
 
     quit_btn = Button(window, text="quit",font=("Arial", 20), command=exit)
     quit_btn.grid(column=4, row=2)
+    #play_again_btn = Button(window, text="play again",font=("Arial", 20), command=instructions_screen)
+    #play_again_btn.grid(column=4, row=3)
 
 def factsScreen1():
     clear()
