@@ -85,7 +85,7 @@ def determineQuesions(loc):
         return ["Earth", "Water", "Wood"],3
 
     elif loc == "RLR":
-        return ["Disguise", "Reveal"], 2
+        return ["Rare", "Common"], 2
 
     elif loc == "RRL":
         return ["Damp" , "dry"],2
