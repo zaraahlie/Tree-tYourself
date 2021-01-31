@@ -1,7 +1,6 @@
 from tkinter import *
 
 window = Tk()
-
 window.geometry('600x400')
 
 window.title("Tree stuff")
@@ -34,11 +33,11 @@ def confirm_name(name):
 
     lbl.grid(column=3, row=0)
 
-    yes_btn = Button(window, text="yes",font=("Arial", 20), command=exit)
+    yes_btn = Button(window, text="yes",font=("Arial", 20), bg='blue', command=instruction_screen)
 
     yes_btn.grid(column=2, row=2)
 
-    no_btn = Button(window, text="no",font=("Arial", 20), command=name_screen)
+    no_btn = Button(window, text="no",font=("Arial", 20), bg='blue', command=name_screen)
 
     no_btn.grid(column=4, row=2)
 
@@ -74,6 +73,45 @@ def start_screen():
 
     start_btn.grid(column=2, row=2)
 
+def instruction_screen():
+    print("end time")
+    clear()
+    window.configure(bg='OliveDrab1')
+
+    lbl = Label(window, text="How to Play", font=("Arial Bold", 40),bg='OliveDrab1')
+    lbl.grid(column=3, row=0)
+
+    T = Text(window, height=2, width=30)
+    T.insert(END, "Find out what tree you are!\nChoose the option that speaks to you\n")
+    T.grid(column=3, row=1)
+
+    play_btn = Button(window, text="play",font=("Arial", 20), command=end_screen)
+
+    play_btn.grid(column=3, row=2)
+
+def end_screen():
+    print("end time")
+    clear()
+    window.configure(bg='OliveDrab1')
+
+    lbl = Label(window, text="Click to get your tree", font=("Arial Bold", 40),bg='OliveDrab1')
+
+    lbl.grid(column=3, row=1)
+
+    tree_btn = Button(window, text="tree",font=("Arial", 20), command=tree_screen)
+
+    tree_btn.grid(column=4, row=2)
+
+
+def tree_screen():
+    print("end time")
+    clear()
+    window.configure(bg='OliveDrab1')
+
+    lbl = Label(window, text="Your tree is: ", font=("Arial Bold", 40),bg='OliveDrab1')
+
+    lbl.grid(column=3, row=1)
+    #get tree
 
 start_screen()
 
