@@ -26,10 +26,10 @@ def clear():
     list = window.grid_slaves()
     for l in list:
         l.destroy()
-    print("screen has been cleared")
+    
 
 def confirm_name(name):
-    print("confirmation")
+   
     clear()
     lbl = Label(window, text="Is "+name+" your name?",font=("Arial", 20),bg='OliveDrab1')
 
@@ -44,7 +44,7 @@ def confirm_name(name):
     no_btn.grid(column=4, row=2)
 
 def name_screen():
-    print("name time")
+  
     clear()
 
     lbl = Label(window, text="Please enter your name",font=("Arial", 20),bg='OliveDrab1')
