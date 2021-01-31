@@ -1,6 +1,6 @@
 # Team HackOverflow's CUHacking Project: Tree-t Yourself!
 
-> **Our team**: Zara Ali, Preethi Nagabandi, Victor Li, Jerry Liu
+> **Team HackOverflow**: Zara Ali, Preethi Nagabandi, Victor Li, Jerry Liu
 
 > **Our Project**: Tree-t Yourself!
 
