@@ -96,7 +96,7 @@ def determineQuesions(loc):
     elif loc == "RLRL":
         return ["Glitter", "Shine","Glow"],3
     
-    elif loc = "LRR":
+    elif loc == "LRR":
         return ["Hot", "Warm","Cool"], 3
 
         
