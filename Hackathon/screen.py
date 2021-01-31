@@ -31,7 +31,7 @@ def clear():
 def confirm_name(name):
     clear()
 
-    lbl = Label(window, text="Is "+name+" your name?",font=("Arial", 20),bg='OliveDrab1')
+    lbl = Label(window, text="Is "+name+" your name?",font=("Arial", 20),bg='#83C5BE')
     lbl.grid(column=3, row=0)
 
     yes_btn = Button(window, text="yes",font=("Arial", 20), command=instructions_screen)
@@ -44,7 +44,7 @@ def name_screen():
 
     clear()
 
-    lbl = Label(window, text="Please enter your name",font=("Arial", 20),bg='OliveDrab1')
+    lbl = Label(window, text="Please enter your name",font=("Arial", 20),bg='#83C5BE')
     lbl.grid(column=3, row=0)
 
     txt = Entry(window,width=10,font=("Arial", 20))
@@ -55,9 +55,9 @@ def name_screen():
 
 def start_screen():
 
-    window.configure(bg='OliveDrab1')
+    window.configure(bg='#83C5BE')
 
-    lbl = Label(window, text="Tree-t Yourself!", font=("Arial Bold", 40),bg='OliveDrab1')
+    lbl = Label(window, text="Tree-t Yourself!", font=("Arial Bold", 40),bg='#83C5BE')
     lbl.grid(column=3, row=1)
 
     quit_btn = Button(window, text="quit",font=("Arial", 20), command=exit)
@@ -69,11 +69,11 @@ def start_screen():
 def instructions_screen():
     clear()
 
-    lbl = Label(window, text="Instructions", font=("Arial Bold", 40),bg='OliveDrab1')
+    lbl = Label(window, text="Instructions", font=("Arial Bold", 40),bg='#83C5BE')
     lbl.grid(column=2, row=1)
 
-    window.configure(bg='OliveDrab1')
-    lbl = Label(window, text="Choose the word that best impacts you at the moment. At the end of your route,\n your answers will spawn a tree that you can learn about!", font=("Arial Bold", 10),bg='OliveDrab1')
+    window.configure(bg='#83C5BE')
+    lbl = Label(window, text="Choose the word that best impacts you at the moment. At the end of your route,\n your answers will spawn a tree that you can learn about!", font=("Arial Bold", 10),bg='#83C5BE')
     lbl.grid(column=2, row=2)
 
     startButton = Button(window, text="Start",font=("Arial", 20), command=determineScreen)
@@ -96,9 +96,9 @@ def path_screen2(ques1, ques2):
 def path_screen3(ques1, ques2, ques3):
     clear()
 
-    window.configure(bg='OliveDrab1')
+    window.configure(bg='#FFDDD2')
 
-    lbl = Label(window, text= ques1 + ", " + ques2 +" or " + ques3,font=("Arial", 20),bg='OliveDrab1')
+    lbl = Label(window, text= ques1 + ", " + ques2 +" or " + ques3,font=("Arial", 20),bg='#FFDDD2')
     lbl.grid(column=3, row=0)
 
     question1 = Button(window, text=ques1,font=("Arial", 20), command=addDirectionL)
@@ -114,10 +114,10 @@ def path_screen3(ques1, ques2, ques3):
 def endScreen(tree):
     clear()
 
-    window.configure(bg='OliveDrab1')
+    window.configure(bg='#FFDDD2')
     next_screen = ""
 
-    lbl = Label(window, text="Your tree is: " +tree, font=("Arial Bold", 20),bg='OliveDrab1')
+    lbl = Label(window, text="Your tree is: " +tree, font=("Arial Bold", 20),bg='#FFDDD2')
     lbl.grid(column=3, row=1)
     #"Cherry Tree","Money Tree", "Rainbow Tree", "Pando Aspen", "Dragon's Blood Tree", "Kauri Tree"
     if tree=="Cherry Tree":
@@ -140,9 +140,9 @@ def endScreen(tree):
 #Displays the Facts per each Tree
 def factsScreen0():
     clear()
-    window.configure(bg='OliveDrab1')
+    window.configure(bg='#E29578')
 
-    lbl = Label(window, text="Facts", font=("Arial Bold", 20),bg='OliveDrab1')
+    lbl = Label(window, text="Facts", font=("Arial Bold", 20),bg='#E29578')
     lbl.grid(column=1, row=0)
 
     T1 = Text(window, height=5, width=50)
@@ -168,9 +168,9 @@ def factsScreen0():
 
 def factsScreen1():
     clear()
-    window.configure(bg='OliveDrab1')
+    window.configure(bg='#E29578')
 
-    lbl = Label(window, text="Facts", font=("Arial Bold", 20),bg='OliveDrab1')
+    lbl = Label(window, text="Facts", font=("Arial Bold", 20),bg='#E29578')
     lbl.grid(column=1, row=0)
 
     T1 = Text(window, height=5, width=50)
@@ -194,9 +194,9 @@ def factsScreen1():
 
 def factsScreen2():
     clear()
-    window.configure(bg='OliveDrab1')
+    window.configure(bg='#E29578')
 
-    lbl = Label(window, text="Facts", font=("Arial Bold", 20),bg='OliveDrab1')
+    lbl = Label(window, text="Facts", font=("Arial Bold", 20),bg='#E29578')
     lbl.grid(column=1, row=0)
 
     T1 = Text(window, height=5, width=50)
@@ -221,9 +221,9 @@ def factsScreen2():
 
 def factsScreen3():
     clear()
-    window.configure(bg='OliveDrab1')
+    window.configure(bg='#E29578')
 
-    lbl = Label(window, text="Facts", font=("Arial Bold", 20),bg='OliveDrab1')
+    lbl = Label(window, text="Facts", font=("Arial Bold", 20),bg='#E29578')
     lbl.grid(column=1, row=0)
 
     T1 = Text(window, height=5, width=50)
@@ -248,9 +248,9 @@ def factsScreen3():
 
 def factsScreen4():
     clear()
-    window.configure(bg='OliveDrab1')
+    window.configure(bg='#E29578')
 
-    lbl = Label(window, text="Facts", font=("Arial Bold", 20),bg='OliveDrab1')
+    lbl = Label(window, text="Facts", font=("Arial Bold", 20),bg='#E29578')
     lbl.grid(column=1, row=0)
 
     T1 = Text(window, height=5, width=50)
@@ -275,9 +275,9 @@ def factsScreen4():
 
 def factsScreen5():
     clear()
-    window.configure(bg='OliveDrab1')
+    window.configure(bg='#E29578')
 
-    lbl = Label(window, text="Facts", font=("Arial Bold", 20),bg='OliveDrab1')
+    lbl = Label(window, text="Facts", font=("Arial Bold", 20),bg='#E29578')
     lbl.grid(column=1, row=0)
 
     T1 = Text(window, height=5, width=50)
