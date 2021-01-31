@@ -6,9 +6,9 @@ def determiningFinalLocation(loc):
     tree1 = ["LLLLL","LLLML","LLLRL", "LLML"]
     tree2 = ["LLLLR", "LLLMR","LLLRR","LLMR"]
     tree3 = ["LLR","LRL", "LRRL","LRLR","RLLL","RLLLR","RLRLL","RLRLR"]
-    tree4 = ["LRLM","RLLLM","RLRLM","LRRM"]
-    tree5 = ["RLRRL","RRLR", "RRRR"]
-    tree6 = ["RLRRR","RRLL","RRRL"]
+    tree4 = ["LRLM","RLLLM","RLRLM","LRRM", "RLLR"]
+    tree5 = ["RLRRL","RRLR", "RRRR", "RLLM"]
+    tree6 = ["RLRRR","RRLL","RRRL", "LRRR"]
     allTrees = [tree1,tree2,tree3,tree4,tree5,tree6]
     for i in range(len(allTrees)):
         if loc in allTrees[i]:
@@ -23,7 +23,7 @@ def addDirectionL():
 def addDirectionR():
     s.USER += "R"
     determineScreen()
-    
+
 def addDirectionM():
     s.USER += "M"
     determineScreen()
@@ -56,7 +56,7 @@ def determineQuesions(loc):
         return ["Watch", "Listen" , "Feel"] , 3
 
     elif loc == "LLL":
-        return ["Glitter", "Shine" , "Glow"] , 3 
+        return ["Glitter", "Shine" , "Glow"] , 3
 
     elif loc == "LLLL":
         return ["Luck", "Beauty"] , 2
@@ -71,7 +71,7 @@ def determineQuesions(loc):
         return ["Fleeting" ,"Eternal"] , 2
 
     elif loc == "LR":
-        return ["Leaf" ,"Branches"] , 2 
+        return ["Leaf" ,"Branches"] , 2
 
     elif loc == "R":
         return ["Disguise" ,"Reveal"] ,2
@@ -96,9 +96,9 @@ def determineQuesions(loc):
 
     elif loc == "RLRL":
         return ["Glitter", "Shine","Glow"],3
-    
+
     elif loc == "LRR":
         return ["Hot", "Warm","Cool"], 3
-    
+
     elif loc =="RLRR":
         return ["Tall", "Short"] , 2
